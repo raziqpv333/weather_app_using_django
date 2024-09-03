@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+   
+</head>
+<body>
+    {{data.city}}
+    {{data.weather_discription}}
+    {{data.temperature_kelvin}}
+    {{data.temperature_celsius}}
+    {{data.humidity}}
+    {{data.temp_min_celsius}}
+    {{data.temp_max_celsius}}
+    {{data.sunrise}}
+    {{data.visibility}}
+    {{data.cloud}}
+    {{data.wind}}
+    {{data.pressure}}
+    {{data.feel_temp}}
+    {{data.sea_level}}
+    {{data.grnd_level}}
+    <h1 style="color:rgb(32, 170, 20)" >ARIDITY WEATHER WIDGET </h1>
+     <div class="grid">
+        <div class="item1">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="" id="" placeholder="name of the city">
+                <input type="submit" value="go">
+            </form>
+            <h2 style="color:blanchedalmond;">{{data.city}}</h2>
+            <p>{{data.weather_discription}}</p>
+					<h3 style="color: aqua;">Now</h3>
+					<h4>{{data.temperature_celsius}}<span>°c</span></h4>
+
+        </div>
+        <div class="item2">
+
+        </div>
+        <div class="item3">
+
+        </div>
+
+
+     </div>   
+</body>
+</html>
